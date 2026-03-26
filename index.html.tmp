@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nethmi Chamathka — Business Analyst & IT Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">NC</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#uiux">UI/UX</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#uiux" class="mob-link">UI/UX</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-text">NC</div>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-tag reveal">Business Analyst · Full Stack Developer · IT Professional</div>
+        <h1 class="hero-name reveal delay-1">Nethmi<br><em>Chamathka</em></h1>
+        <p class="hero-sub reveal delay-2">
+          Turning business complexity into clear, data-driven decisions — and crafting interfaces people love to use.
+        </p>
+        <div class="hero-cta reveal delay-3">
+          <a href="#experience" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-ghost">Get In Touch</a>
+        </div>
+        <div class="hero-socials reveal delay-4">
+          <a href="https://linkedin.com/in/nethchamathka" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/nethmichamathka" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="mailto:chamathkanethmi11@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-right reveal delay-2">
+        <div class="hero-img-wrap">
+          <img src="profile.jpg" alt="Nethmi Chamathka" class="hero-photo" />
+          <div class="hero-img-accent"></div>
+          <div class="hero-img-ring"></div>
+        </div>
+        <div class="floating-badge badge-1">
+          <span class="badge-num">2+</span>
+          <span class="badge-txt">Yrs Exp</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <span class="badge-num">15+</span>
+          <span class="badge-txt">Process Gaps Found</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-wrap">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <p class="section-label">01 / About</p>
+          <h2 class="section-title">Analytical.<br>Creative.<br>Detail-Oriented.</h2>
+        </div>
+        <div class="about-right reveal delay-1">
+          <p class="about-body">I'm a Business Analyst and Full Stack Developer with hands-on experience transforming business requirements into data-driven, system-based solutions. I specialize in requirements gathering, process modelling, UAT, Power BI dashboards, and building scalable applications with modern tech stacks.</p>
+          <p class="about-body">Currently completing my BSc in Information Technology at SLIIT (expected 2026), with a strong interest in Business Intelligence, Full-Stack Development, and software engineering best practices. Based in Kadawatha, Sri Lanka.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-n">2</span><span class="stat-l">Gov't Systems<br>Analyzed</span></div>
+            <div class="stat"><span class="stat-n">6+</span><span class="stat-l">Agile Sprints<br>Completed</span></div>
+            <div class="stat"><span class="stat-n">8+</span><span class="stat-l">Business Users<br>Collaborated</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-wrap">
+      <p class="section-label reveal">02 / Experience</p>
+      <h2 class="section-title reveal delay-1">Where I've<br>Made an Impact</h2>
+
+      <div class="exp-card reveal delay-2">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-role">Trainee Business Analyst</h3>
+            <p class="exp-company">Informatics International Ltd</p>
+          </div>
+          <span class="exp-date">July 2024 – Jan 2026</span>
+        </div>
+        <div class="exp-projects">
+          <div class="exp-proj-tag">HRMIS – Ministry of Public Administration</div>
+          <div class="exp-proj-tag">Vehicle Registration System – Dept. of Motor Traffic</div>
+        </div>
+        <ul class="exp-list">
+          <li>Analyzed business requirements for <strong>2 large-scale government systems</strong>, identifying <strong>15+ functional and process gaps</strong> that directly informed system redesign.</li>
+          <li>Converted business needs into clear requirements for <strong>5+ development teams</strong>, reducing back-and-forth across sprint cycles.</li>
+          <li>Documented <strong>10+ AS-IS and TO-BE workflows</strong> to improve operational clarity and reduce ambiguity.</li>
+          <li>Prepared and maintained <strong>3 SRS documents</strong> ensuring full traceability and sign-off readiness.</li>
+          <li>Collaborated with <strong>8+ business users during UAT sessions</strong>, identifying critical defects and reducing post-deployment issues.</li>
+          <li>Participated in <strong>6+ Agile sprint cycles</strong> — sprint planning, stand-ups, reviews, and retrospectives.</li>
+        </ul>
+      </div>
+
+      <!-- LEADERSHIP -->
+      <div class="leadership-section reveal delay-3">
+        <p class="section-label" style="margin-bottom:1.5rem;">Leadership & Academic Projects</p>
+        <div class="leadership-grid">
+          <div class="lead-card">
+            <div class="lead-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Project Group Leader</h4>
+              <p>Led academic development teams across multiple SLIIT group projects — coordinating task division, sprint timelines, and ensuring deliverables were met on schedule.</p>
+            </div>
+          </div>
+          <div class="lead-card">
+            <div class="lead-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <h4>Requirements & Documentation Lead</h4>
+              <p>Took ownership of system requirements in group projects — translating team discussions into structured SRS drafts and process diagrams presented to academic panels.</p>
+            </div>
+          </div>
+          <div class="lead-card">
+            <div class="lead-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Agile Team Contributor</h4>
+              <p>Applied Agile principles in academic sprints, facilitating retrospectives and maintaining team alignment — a practice that translated directly into my professional BA role.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-section reveal delay-4">
+        <p class="section-label" style="margin-bottom:1.5rem;">Education</p>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <span class="edu-year">2023 – 2026</span>
+            <h4>BSc (Hons) Information Technology</h4>
+            <p>Sri Lanka Institute of Information Technology (SLIIT)</p>
+          </div>
+          <div class="edu-card">
+            <span class="edu-year">2018 – 2022</span>
+            <h4>G.C.E. Advanced Level</h4>
+            <p>Biological Science Stream · Yasodara Vidyalaya, Colombo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-wrap">
+      <p class="section-label reveal">03 / Skills</p>
+      <h2 class="section-title reveal delay-1">My Toolkit</h2>
+      <div class="skills-columns">
+        <div class="skill-group reveal delay-1">
+          <h3 class="skill-group-title">Business Analysis</h3>
+          <div class="skill-chips">
+            <span>Requirements Gathering</span><span>Stakeholder Communication</span><span>SRS Documentation</span><span>UAT</span><span>Process Modelling</span><span>Data Validation</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-2">
+          <h3 class="skill-group-title">BI & Analytics</h3>
+          <div class="skill-chips">
+            <span>Power BI</span><span>KPI Dashboards</span><span>Advanced Excel</span><span>Data Warehousing</span><span>Agile / Scrum</span><span>Jira</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-3">
+          <h3 class="skill-group-title">Design & Technical</h3>
+          <div class="skill-chips">
+            <span>Java</span><span>Python</span><span>JavaScript</span><span>Node.js</span><span>Express.js</span><span>Spring Boot</span><span>React.js</span><span>MySQL</span><span>MongoDB</span><span>HTML / CSS</span><span>Git / GitHub</span><span>Android Studio (Kotlin)</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-4">
+          <h3 class="skill-group-title">Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item"><span class="cert-dot"></span><span>IT for Business Success — University of London</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Machine Learning for All — University of London</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Full-Stack Development for Beginners — University of London</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Software Testing Tutorial — University of London</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-wrap">
+      <p class="section-label reveal">04 / Projects</p>
+      <h2 class="section-title reveal delay-1">Things I've Built</h2>
+      <div class="projects-grid">
+
+        <!-- PROJECT 01 — Medical -->
+        <div class="proj-card reveal delay-1">
+          <div class="proj-img-col">
+            <img src="illus-medical.jpg" alt="Medical History Management System" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span></div><span class="proj-year-badge">3rd Year</span></div>
+            <h3>Medical History Management System</h3>
+            <p>Full-featured healthcare platform managing patient history, diagnoses, prescriptions, and pharmacy operations. Designed clinical workflows and role-based access for patients, doctors, pharmacists, and data entry staff.</p>
+            <div class="proj-footer"><span class="proj-date-label">Mar – May 2025</span><a href="https://github.com/Viduraz/ITPM_Project" target="_blank" class="proj-link">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- PROJECT 02 — Agri Connect -->
+        <div class="proj-card reveal delay-2">
+          <div class="proj-img-col">
+            <img src="agri.jpg" alt="Agri Connect" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>React.js</span><span>Spring Boot</span></div><span class="proj-year-badge">3rd Year</span></div>
+            <h3>Agri Connect – Smart Agricultural Platform</h3>
+            <p>Knowledge-sharing and community platform for agricultural learning, plant care planning, and progress tracking. Designed user journeys and system flows to support diverse agricultural user needs.</p>
+            <div class="proj-footer"><span class="proj-date-label">Mar – May 2025</span><a href="https://github.com/Viduraz/PAF_SLIIT" target="_blank" class="proj-link">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- PROJECT 03 — Jayasinghe (full-width with screenshot) -->
+        <div class="proj-card proj-card-wide reveal delay-3">
+          <div class="proj-img-col proj-img-wide">
+            <img src="JJ.png" alt="Jayasinghe Storelines" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span></div><span class="proj-year-badge">2nd Year · Sem 2</span></div>
+            <h3>Jayasinghe Storelines – Online Selling Platform</h3>
+            <p>Full-stack e-commerce platform built with MERN stack. My contribution: implemented the <strong>Reviews & Ratings system</strong> and <strong>Inquiry Management</strong> — enabling users to leave product feedback and submit/manage product inquiries via an integrated chatbot interface.</p>
+            <div class="proj-footer"><span class="proj-date-label">2nd Year 2nd Semester</span><a href="https://github.com/chathuwa-whiz/JayasingheStoreline-MERN" target="_blank" class="proj-link">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- PROJECT 04 — Exam System -->
+        <div class="proj-card reveal delay-1">
+          <div class="proj-img-col">
+            <img src="illus-exam.jpg" alt="Online Examination System" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>Java</span><span>Java Servlets</span><span>MySQL</span><span>Tomcat</span></div><span class="proj-year-badge">2nd Year · Sem 1</span></div>
+            <h3>Online Examination Management System</h3>
+            <p>Platform enabling users to view exam schedules, register, take exams, and access results online. Built the full database schema and backend logic to manage exam sessions and result storage.</p>
+            <div class="proj-footer"><span class="proj-date-label">Feb – Jun 2024</span><a href="https://github.com/nethmichamathka/Project-Online-Examination-Management-System" target="_blank" class="proj-link">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- PROJECT 05 — Blood Donation -->
+        <div class="proj-card reveal delay-2">
+          <div class="proj-img-col">
+            <img src="illus-blood.jpg" alt="Blood Donation System" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>HTML/CSS/JS</span><span>PHP</span><span>MySQL</span></div><span class="proj-year-badge">1st Year · Sem 2</span></div>
+            <h3>Blood Donation System</h3>
+            <p>Web-based platform bridging blood donors and healthcare facilities. Manages donor registration, blood type inventory, hospital requests, and donation matching — making blood finding faster and more accessible.</p>
+            <div class="proj-footer"><span class="proj-date-label">1st Year 2nd Semester</span><a href="https://github.com/nethmichamathka/Blood-Donation-System" target="_blank" class="proj-link">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UI/UX DESIGN -->
+  <section id="uiux">
+    <div class="section-wrap">
+      <p class="section-label reveal">05 / UI/UX Design</p>
+      <h2 class="section-title reveal delay-1">Designing Experiences<br>People <em>Love</em></h2>
+      <p class="uiux-intro reveal delay-2">
+        Beyond analysis and code, I design clean, intuitive interfaces. My work spans mobile banking, travel apps, and reminder tools — all focused on clarity, usability, and visual polish.
+        <a href="https://chamathkanethportfolio.my.canva.site" target="_blank" class="uiux-canva-link">View full gallery ↗</a>
+      </p>
+
+      <div class="uiux-grid reveal delay-2">
+
+        <!-- Ceylon Lanka Bank App -->
+        <div class="uiux-card uiux-card-tall">
+          <div class="uiux-img-wrap">
+            <img src="uiux-banking.png" alt="Ceylon Lanka Bank Mobile App" />
+          </div>
+          <div class="uiux-card-body">
+            <div class="uiux-badge">Mobile UI</div>
+            <h4>Ceylon Lanka Bank – Mobile Banking App</h4>
+            <p>Designed a clean mobile banking interface featuring balance display, debited/credited history, and quick-action send/pay buttons. Built for intuitive financial management.</p>
+            <a href="https://github.com/nethmichamathka/Celon_Lanka_Bank" target="_blank" class="uiux-github-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Sri Lanka Tourism App -->
+        <div class="uiux-card uiux-card-tall">
+          <div class="uiux-img-wrap">
+            <img src="uiux-tourism.png" alt="Welcome to Sri Lanka Tourism App" />
+          </div>
+          <div class="uiux-card-body">
+            <div class="uiux-badge">App Design · Figma</div>
+            <h4>Welcome to Sri Lanka – Tourism App</h4>
+            <p>Designed a multi-screen tourism app with destination categories (Colombo, Nature, History), immersive imagery, star ratings, and detailed place descriptions to guide travellers.</p>
+            <a href="https://github.com/nethmichamathka/SriTravels-figma-UI" target="_blank" class="uiux-github-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Splash Reminder -->
+        <div class="uiux-card">
+          <div class="uiux-img-wrap">
+            <img src="uiux-splash.png" alt="Splash Reminder Mobile App" />
+          </div>
+          <div class="uiux-card-body">
+            <div class="uiux-badge">Mobile App · Kotlin</div>
+            <h4>Splash Reminder – Hydration App</h4>
+            <p>Android app built with Kotlin in Android Studio. Features push notifications and a daily alarm system to remind users to drink water and stay healthy.</p>
+            <a href="https://github.com/nethmichamathka/Water-Reminder-App" target="_blank" class="uiux-github-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-wrap">
+      <p class="section-label reveal">06 / Contact</p>
+      <h2 class="section-title reveal delay-1">Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal delay-2">
+          <p class="contact-body">Open to BA roles, UI/UX opportunities, internships, and data analytics positions. Feel free to reach out!</p>
+          <div class="contact-links">
+            <a href="mailto:chamathkanethmi11@gmail.com" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              chamathkanethmi11@gmail.com
+            </a>
+            <a href="tel:0784473989" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              078-4473989
+            </a>
+            <a href="https://linkedin.com/in/nethchamathka" target="_blank" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              linkedin.com/in/nethchamathka
+            </a>
+            <a href="https://github.com/nethmichamathka" target="_blank" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              github.com/nethmichamathka
+            </a>
+          </div>
+        </div>
+        <div class="contact-location reveal delay-3">
+          <div class="location-box">
+            <div class="location-dot"></div>
+            <span>Kadawatha, Sri Lanka</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nethmi Chamathka. Designed & built with care.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
