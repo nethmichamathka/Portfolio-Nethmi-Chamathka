@@ -1,0 +1,14 @@
+# Ignore everything
+*
+.*
+
+# Except git
+!.git/
+!.gitignore
+
+# And the portfolio directory
+!Desktop/
+Desktop/*
+!Desktop/LOOK\ FOR\ FOLDERS/
+Desktop/LOOK\ FOR\ FOLDERS/*
+!Desktop/LOOK\ FOR\ FOLDERS/PORTFOLIO\ NEW/
