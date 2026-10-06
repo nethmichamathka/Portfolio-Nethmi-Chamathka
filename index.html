@@ -80,7 +80,7 @@
       </div>
       <div class="hero-right reveal delay-2">
         <div class="hero-img-wrap">
-          <img src="Moody%20Curly-Haired%20Studio%20Portrait.png" alt="Nethmi Chamathka" class="hero-photo" />
+          <img src="black.png" alt="Nethmi Chamathka" class="hero-photo" />
           <div class="hero-img-accent"></div>
           <div class="hero-img-ring"></div>
         </div>
@@ -229,10 +229,10 @@
         <div class="skill-group reveal delay-4">
           <h3 class="skill-group-title">Certifications</h3>
           <div class="cert-list">
-            <div class="cert-item"><span class="cert-dot"></span><span>IT for Business Success — University of London</span></div>
-            <div class="cert-item"><span class="cert-dot"></span><span>Machine Learning for All — University of London</span></div>
-            <div class="cert-item"><span class="cert-dot"></span><span>Full-Stack Development for Beginners — University of London</span></div>
-            <div class="cert-item"><span class="cert-dot"></span><span>Software Testing Tutorial — University of London</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Machine Learning for All — University of London (Coursera), Oct 2024, grade 92.5%</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Python for Beginners — Open Learning Platform, UoM, Jun 2026</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Foundations of Project Management — Open Learning Platform, UoM, Oct 2024</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Web Design for Beginners — Open Learning Platform, UoM, Jan 2024</span></div>
           </div>
         </div>
       </div>
@@ -320,42 +320,105 @@
         </div>
         <div class="feature-body">
           <h3>SecureElderCare</h3>
-          <p class="feature-sub">Visual-Based Secure Elder Care Monitoring System Using Artificial Intelligence</p>
-          <p class="feature-lead">An AI-powered system that monitors elder care using computer vision. This is my final-year research project, built with a four-member team.</p>
+          <p class="feature-sub">A Privacy-Aware Microservices Platform for Intelligent Elderly Monitoring</p>
+          <p class="feature-lead">My final-year research project, built with a four-member team and written up as a research paper. A camera in the room feeds six independent services that verify identity, track movement, detect falls and check daily routines. The system keeps skeleton points and face embeddings instead of raw video wherever possible.</p>
+
           <div class="feature-cols">
             <div>
               <h4>My role</h4>
               <ul>
-                <li>Led the data modelling</li>
-                <li>Led the requirements engineering</li>
-                <li>Led the computer-vision logic design</li>
+                <li>Built the <b>Schedule Monitoring</b> module (Module 4)</li>
+                <li>Led data modelling, requirements engineering and computer-vision logic design</li>
+                <li>Co-authored the research paper</li>
               </ul>
             </div>
             <div>
-              <h4>How it works</h4>
+              <h4>The six services</h4>
               <ul>
-                <li><b>MoveNet</b> for body pose</li>
-                <li><b>MediaPipe FaceMesh</b> for face tracking</li>
-                <li><b>COCO-SSD</b> for object detection</li>
-                <li>A custom <b>Temporal Heuristics Engine</b></li>
+                <li><b>Authentication:</b> JWT login and role-based access</li>
+                <li><b>Face and skeleton verification:</b> MTCNN, FaceNet, MediaPipe Pose</li>
+                <li><b>Tracking and geofencing:</b> YOLOv8, ByteTrack</li>
+                <li><b>Anomaly detection:</b> LSTM and autoencoder</li>
+                <li><b>Schedule monitoring:</b> my module</li>
+                <li><b>Gateway dashboard:</b> one view of all alerts</li>
               </ul>
             </div>
             <div>
               <h4>Built with</h4>
               <ul>
-                <li><b>FastAPI</b> backend</li>
-                <li><b>React</b> frontend</li>
+                <li><b>FastAPI</b> backends</li>
+                <li><b>React / Vite</b> interfaces</li>
+                <li><b>MongoDB</b> database</li>
+                <li><b>Docker Compose</b> deployment</li>
+                <li><b>TensorFlow.js</b> in the browser</li>
               </ul>
             </div>
           </div>
+
+          <!-- MY MODULE -->
+          <div class="feature-module">
+            <span class="module-tag">My module</span>
+            <h4 class="module-title">Schedule Monitoring</h4>
+            <p class="module-intro">Checks whether daily routines such as eating, medication and sleeping happen on time. It combines machine-learning activity detection with schedule rules, and it alerts the caregiver when something is Late or Missed.</p>
+
+            <div class="flow-steps">
+              <span>1. Camera pose detection</span>
+              <span>2. Feature extraction</span>
+              <span>3. Activity classification</span>
+              <span>4. Check daily schedule</span>
+              <span>5. Dashboard alert or OK</span>
+            </div>
+
+            <div class="module-grid">
+              <div>
+                <h5>What it measures</h5>
+                <ul>
+                  <li>Hand-to-mouth distance (eating, drinking)</li>
+                  <li>Torso angle (sitting, standing, lying)</li>
+                  <li>Knee and hip angles</li>
+                  <li>Height-to-width ratio (lying detection)</li>
+                  <li>Keypoint speed and vertical movement</li>
+                  <li>How long the person has been inactive</li>
+                </ul>
+              </div>
+              <div>
+                <h5>Activities it recognises</h5>
+                <p class="chip-line"><span>Walking</span><span>Sitting</span><span>Standing</span><span>Eating</span><span>Drinking</span><span>Resting</span><span>Sleeping</span></p>
+                <p class="module-note">A Random Forest classifier labels the activity. Temporal smoothing reduces mistakes, and a threshold-based fallback is used when confidence is low.</p>
+              </div>
+              <div>
+                <h5>How each routine is marked</h5>
+                <ul class="status-list">
+                  <li><b class="st st-early">Early</b> detected 10 or more minutes before the scheduled start</li>
+                  <li><b class="st st-done">Done</b> detected inside the scheduled window</li>
+                  <li><b class="st st-late">Late</b> detected after the scheduled end time</li>
+                  <li><b class="st st-missed">Missed</b> nothing detected by the end time (checked every 60 seconds)</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="module-tech"><b>Parts:</b> MonitoringService (applies grace periods and marks status), ScheduleService (create, edit and delete daily routines) and NotificationService (Late and Missed alerts). <b>Data:</b> MongoDB collections for schedules, activity logs, notifications, daily archives and deviations. <b>Stack:</b> FastAPI backend, React frontend, and a TensorFlow.js pipeline (pose estimation, COCO-SSD, Random Forest) running in the browser.</p>
+          </div>
+
           <h4 class="feature-h">Key features</h4>
           <div class="feature-feats">
-            <div><b>Action recognition and automatic scheduling</b><span>Identifies the elder's actions and marks them in the daily schedule automatically.</span></div>
+            <div><b>Action recognition and automatic scheduling</b><span>Identifies what the elder is doing and marks it in the daily schedule automatically.</span></div>
             <div><b>Missed-activity alerts</b><span>If a scheduled activity is not done, the caregiver and the guardian are notified.</span></div>
-            <div><b>Face and skeleton verification</b><span>Confirms who the person is using face and body-skeleton checks.</span></div>
-            <div><b>Tracking and geofencing</b><span>Tracks the person's location and works with safe-area boundaries.</span></div>
-            <div><b>Anomaly detection</b><span>Detects unusual behaviour or activity patterns.</span></div>
+            <div><b>Face and skeleton verification</b><span>Face matching with a skeleton-based backup when the face is hidden or at a bad angle.</span></div>
+            <div><b>Tracking and geofencing</b><span>Follows each person and raises an alert when they enter or leave a zone such as the bed area, doorway or a restricted area.</span></div>
+            <div><b>Anomaly detection</b><span>Spots falls, unusual motion and long inactivity by combining rules, an LSTM and an autoencoder.</span></div>
           </div>
+
+          <h4 class="feature-h">Results reported in our paper</h4>
+          <div class="results-strip">
+            <div><strong>94.2%</strong><span>Face verification accuracy</span></div>
+            <div><strong>92.5%</strong><span>Fall detection sensitivity</span></div>
+            <div><strong>89.7%</strong><span>Fall detection specificity</span></div>
+            <div><strong>87.3%</strong><span>Activity recognition accuracy</span></div>
+            <div><strong>27–30</strong><span>FPS for schedule monitoring</span></div>
+          </div>
+          <p class="results-note">Tested in a single local deployment. No clinical validation has been done yet.</p>
+
           <p class="feature-foot">Presented to an academic panel with full technical documentation.</p>
         </div>
       </div>
