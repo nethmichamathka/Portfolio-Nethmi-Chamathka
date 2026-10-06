@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#081C15" />
   <title>Nethmi Chamathka — Business Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +21,8 @@
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3v13m0 0-5-5m5 5 5-5M4 21h16"/></symbol>
   </svg>
 
+  <div class="loader" aria-hidden="true"><span>NC</span></div>
+  <div id="scrollProgress"></div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
@@ -57,6 +60,7 @@
 
   <!-- HERO -->
   <section id="hero">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="hero-bg-text">NC</div>
     <div class="hero-grid">
       <div class="hero-left">
@@ -76,7 +80,7 @@
       </div>
       <div class="hero-right reveal delay-2">
         <div class="hero-img-wrap">
-          <img src="profile7.png" alt="Nethmi Chamathka" class="hero-photo" />
+          <img src="Moody%20Curly-Haired%20Studio%20Portrait.png" alt="Nethmi Chamathka" class="hero-photo" />
           <div class="hero-img-accent"></div>
           <div class="hero-img-ring"></div>
         </div>
@@ -88,6 +92,8 @@
     </div>
     <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
   </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Requirements Gathering</span><span>SRS Documentation</span><span>AS-IS / TO-BE</span><span>UAT</span><span>Agile / Scrum</span><span>Jira</span><span>Power BI</span><span>Test Case Design</span><span>Stakeholder Communication</span><span>Process Modelling</span><span>Requirements Gathering</span><span>SRS Documentation</span><span>AS-IS / TO-BE</span><span>UAT</span><span>Agile / Scrum</span><span>Jira</span><span>Power BI</span><span>Test Case Design</span><span>Stakeholder Communication</span><span>Process Modelling</span></div></div>
 
   <!-- ABOUT -->
   <section id="about">
@@ -489,5 +495,22 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="animations.js"></script>
+  <script>
+    /* Safety net: makes sure every section becomes visible even if another script fails */
+    (function () {
+      function show(el) { el.classList.add('visible'); }
+      function run() {
+        var els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) { els.forEach(show); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+        }, { threshold: 0.05 });
+        els.forEach(function (el) { io.observe(el); });
+        document.querySelectorAll('#hero .reveal').forEach(function (el) { setTimeout(function () { show(el); }, 300); });
+      }
+      if (document.readyState !== 'loading') run(); else document.addEventListener('DOMContentLoaded', run);
+    })();
+  </script>
 </body>
 </html>

@@ -1,49 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── CURSOR ── */
+  /* ── CURSOR ──
+     The custom cursor only turns on after the first real mouse movement.
+     Until then (or if anything fails) the normal Mac arrow stays visible. */
   const cursor = document.getElementById('cursor');
   const follower = document.getElementById('cursorFollower');
-  let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+  const isTouch = 'ontouchstart' in window || !window.matchMedia('(hover: hover)').matches;
 
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX; mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top  = mouseY + 'px';
-  });
+  if (cursor && follower && !isTouch) {
+    let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0, started = false;
 
-  function animateFollower() {
-    followerX += (mouseX - followerX) * 0.1;
-    followerY += (mouseY - followerY) * 0.1;
-    follower.style.left = followerX + 'px';
-    follower.style.top  = followerY + 'px';
-    requestAnimationFrame(animateFollower);
-  }
-  animateFollower();
-
-  document.querySelectorAll('a, button, .proj-card, .uiux-card, .lead-card, .skill-chips span').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.width = '14px'; cursor.style.height = '14px';
-      follower.style.width = '56px'; follower.style.height = '56px';
-      follower.style.opacity = '0.25';
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      cursor.style.left = mouseX + 'px';
+      cursor.style.top  = mouseY + 'px';
+      if (!started) {
+        started = true;
+        followerX = mouseX; followerY = mouseY;
+        follower.style.left = followerX + 'px';
+        follower.style.top  = followerY + 'px';
+        document.body.classList.add('cursor-on');
+      }
     });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.width = '8px'; cursor.style.height = '8px';
-      follower.style.width = '36px'; follower.style.height = '36px';
-      follower.style.opacity = '0.5';
-    });
-  });
 
-  if ('ontouchstart' in window) {
-    cursor.style.display = 'none';
-    follower.style.display = 'none';
-    document.body.style.cursor = 'auto';
+    document.addEventListener('mouseleave', () => document.body.classList.remove('cursor-on'));
+    document.addEventListener('mouseenter', () => { if (started) document.body.classList.add('cursor-on'); });
+
+    (function animateFollower() {
+      followerX += (mouseX - followerX) * 0.15;
+      followerY += (mouseY - followerY) * 0.15;
+      follower.style.left = followerX + 'px';
+      follower.style.top  = followerY + 'px';
+      requestAnimationFrame(animateFollower);
+    })();
+
+    document.querySelectorAll('a, button, .proj-card, .uiux-card, .lead-card, .skill-chips span, .feature-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '14px'; cursor.style.height = '14px';
+        follower.style.width = '56px'; follower.style.height = '56px';
+        follower.style.opacity = '0.6';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '10px'; cursor.style.height = '10px';
+        follower.style.width = '36px'; follower.style.height = '36px';
+        follower.style.opacity = '0.9';
+      });
+    });
+  } else {
+    if (cursor) cursor.style.display = 'none';
+    if (follower) follower.style.display = 'none';
   }
 
   /* ── NAVBAR SCROLL ── */
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
+  const onScrollNav = () => navbar.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', onScrollNav, { passive: true });
+  onScrollNav();
 
   /* ── HAMBURGER ── */
   const hamburger = document.getElementById('hamburger');
@@ -63,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── SMOOTH SCROLL ── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
@@ -158,12 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
     badge.style.animation = `${i % 2 === 0 ? 'floatA' : 'floatB'} 4s ease-in-out infinite`;
   });
 
-  /* ── PINK/BLUE SKILL CHIP ALTERNATION ── */
+  /* ── SKILL CHIP HOVER COLOURS ── */
   document.querySelectorAll('.skill-chips span').forEach((chip, i) => {
     chip.addEventListener('mouseenter', () => {
       chip.style.borderColor = i % 2 === 0 ? 'var(--pink)' : 'var(--blue)';
       chip.style.color = i % 2 === 0 ? 'var(--pink)' : 'var(--blue)';
-      chip.style.background = i % 2 === 0 ? 'rgba(244,167,185,.07)' : 'rgba(168,200,232,.07)';
+      chip.style.background = i % 2 === 0 ? 'rgba(251,176,45,.08)' : 'rgba(53,201,160,.08)';
     });
     chip.addEventListener('mouseleave', () => {
       chip.style.borderColor = '';
