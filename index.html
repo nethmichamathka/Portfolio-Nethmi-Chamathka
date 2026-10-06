@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#081C15" />
+  <title>Nethmi Chamathka — Business Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Reusable icons (defined once) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 8h10M9 4l4 4-4 4"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3v13m0 0-5-5m5 5 5-5M4 21h16"/></symbol>
+  </svg>
+
+  <div class="loader" aria-hidden="true"><span>NC</span></div>
+  <div id="scrollProgress"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">NC</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#samples">BA Samples</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#uiux">Showcase</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#samples" class="mob-link">BA Samples</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#uiux" class="mob-link">Showcase</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="hero-bg-text">NC</div>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-tag reveal">Junior Business Analyst · Full Stack Developer</div>
+        <h1 class="hero-name reveal delay-1">Nethmi<br><em>Chamathka</em></h1>
+        <p class="hero-sub reveal delay-2">I turn business problems into clear solutions that developers can build. I work between stakeholders and development teams, using structured analysis, clean code and data.</p>
+        <div class="hero-cta reveal delay-3">
+          <a href="#samples" class="btn-primary">View My BA Work</a>
+          <a href="Nethmi_Chamathka_CV_Business_Analyst.pdf" class="btn-ghost" download>Download CV</a>
+          <a href="#contact" class="btn-ghost">Get In Touch</a>
+        </div>
+        <div class="hero-socials reveal delay-4">
+          <a href="https://linkedin.com/in/nethchamathka" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+          <a href="https://github.com/nethmichamathka" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+          <a href="mailto:chamathkanethmi11@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-right reveal delay-2">
+        <div class="hero-img-wrap">
+          <img src="Moody%20Curly-Haired%20Studio%20Portrait.png" alt="Nethmi Chamathka" class="hero-photo" />
+          <div class="hero-img-accent"></div>
+          <div class="hero-img-ring"></div>
+        </div>
+        <div class="floating-badge badge-2">
+          <span class="badge-num">15+</span>
+          <span class="badge-txt">Process Gaps Found</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Requirements Gathering</span><span>SRS Documentation</span><span>AS-IS / TO-BE</span><span>UAT</span><span>Agile / Scrum</span><span>Jira</span><span>Power BI</span><span>Test Case Design</span><span>Stakeholder Communication</span><span>Process Modelling</span><span>Requirements Gathering</span><span>SRS Documentation</span><span>AS-IS / TO-BE</span><span>UAT</span><span>Agile / Scrum</span><span>Jira</span><span>Power BI</span><span>Test Case Design</span><span>Stakeholder Communication</span><span>Process Modelling</span></div></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-wrap">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <p class="section-label">01 / About</p>
+          <h2 class="section-title">From requirements<br>to delivery.</h2>
+        </div>
+        <div class="about-right reveal delay-1">
+          <p class="about-body">I'm a final-year IT student at SLIIT. I have worked as a Trainee Business Analyst on two large Sri Lankan government systems: the HRMIS for the Ministry of Public Administration and the Vehicle Registration System for the Department of Motor Traffic. I meet stakeholders, find out what they really need, turn it into clear requirements, and follow the work through UAT and delivery.</p>
+          <p class="about-body">Outside BA work, I build full-stack applications, from MERN platforms to Java backends and Android apps. I write clean, maintainable code and care about how systems are structured. I want a role where I can analyze, communicate, build and deliver.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-n">2</span><span class="stat-l">Gov't Systems<br>Analyzed</span></div>
+            <div class="stat"><span class="stat-n">6+</span><span class="stat-l">Agile Sprints<br>Completed</span></div>
+            <div class="stat"><span class="stat-n">8+</span><span class="stat-l">Business Users<br>Collaborated</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-wrap">
+      <p class="section-label reveal">02 / Experience</p>
+      <h2 class="section-title reveal delay-1">Where I've<br>Made an Impact</h2>
+
+      <div class="exp-card reveal delay-2">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-role">Trainee Business Analyst</h3>
+            <p class="exp-company">Informatics International Ltd</p>
+          </div>
+          <span class="exp-date">July 2025 – January 2026</span>
+        </div>
+        <div class="exp-projects">
+          <div class="exp-proj-tag">HRMIS – Ministry of Public Administration</div>
+          <div class="exp-proj-tag">Vehicle Registration System – Dept. of Motor Traffic</div>
+        </div>
+        <ul class="exp-list">
+          <li>Analyzed requirements for <strong>2 large government systems</strong> and found <strong>15+ functional and process gaps</strong> that shaped the system redesign.</li>
+          <li>Turned business needs into clear <strong>functional and non-functional requirements</strong> for <strong>5+ development teams</strong>, so teams needed fewer clarifications during sprints.</li>
+          <li>Documented <strong>10+ AS-IS and TO-BE workflows</strong> so business and technical people shared the same understanding of each process.</li>
+          <li>Wrote and maintained <strong>SRS documents</strong> with full traceability, ready for sign-off across several sprint releases.</li>
+          <li>Designed and ran <strong>functional and non-functional test cases</strong> for <strong>IAT and UAT</strong> with <strong>8+ business users</strong>, to check the system worked, find critical defects and cut problems after launch.</li>
+          <li>Took part in <strong>6+ Agile sprints</strong> (planning, daily stand-ups, reviews and retrospectives) and helped deliver on time.</li>
+        </ul>
+      </div>
+
+      <!-- LEADERSHIP -->
+      <div class="leadership-section reveal delay-3">
+        <p class="section-label leadership-label">Leadership & Academic Projects</p>
+        <div class="leadership-grid">
+          <div class="lead-card">
+            <div class="lead-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Project Group Leader</h4>
+              <p>Led academic development teams across multiple SLIIT group projects — coordinating task division, sprint timelines, and ensuring deliverables were met on schedule.</p>
+            </div>
+          </div>
+          <div class="lead-card">
+            <div class="lead-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <h4>Requirements & Documentation Lead</h4>
+              <p>Took ownership of system requirements in group projects — translating team discussions into structured SRS drafts and process diagrams presented to academic panels.</p>
+            </div>
+          </div>
+          <div class="lead-card">
+            <div class="lead-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Agile Team Contributor</h4>
+              <p>Applied Agile principles in academic sprints, facilitating retrospectives and maintaining team alignment — a practice that translated directly into my professional BA role.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-section reveal delay-4">
+        <p class="section-label edu-label">Education</p>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <span class="edu-year">2023 – 2027 (expected)</span>
+            <h4>BSc (Hons) Information Technology</h4>
+            <p>Sri Lanka Institute of Information Technology (SLIIT)</p>
+          </div>
+          <div class="edu-card">
+            <span class="edu-year">2018 – 2022</span>
+            <h4>G.C.E. Advanced Level</h4>
+            <p>Biological Science Stream · Yasodara Vidyalaya, Colombo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-wrap">
+      <p class="section-label reveal">03 / Skills</p>
+      <h2 class="section-title reveal delay-1">My Toolkit</h2>
+      <div class="skills-columns">
+        <div class="skill-group reveal delay-1">
+          <h3 class="skill-group-title">Business Analysis</h3>
+          <div class="skill-chips">
+            <span>Requirements Gathering</span><span>Stakeholder Communication</span><span>SRS Documentation</span><span>Process Modelling</span><span>UAT</span><span>Data Validation</span><span>Agile / Scrum</span><span>Jira</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-2">
+          <h3 class="skill-group-title">QA & Testing</h3>
+          <div class="skill-chips">
+            <span>Test Case Design</span><span>Functional Testing</span><span>Non-Functional Testing</span><span>IAT Testing</span><span>Defect Tracking</span><span>Test Documentation</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-3">
+          <h3 class="skill-group-title">Design & Technical</h3>
+          <div class="skill-chips">
+            <span>Java</span><span>Python</span><span>JavaScript</span><span>Node.js</span><span>Express.js</span><span>Spring Boot</span><span>React.js</span><span>MySQL</span><span>MongoDB</span><span>HTML / CSS</span><span>Git / GitHub</span><span>Android Studio (Kotlin)</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-4">
+          <h3 class="skill-group-title">Supporting: BI & Analytics</h3>
+          <div class="skill-chips">
+            <span>Power BI</span><span>Advanced Excel</span>
+          </div>
+        </div>
+        <div class="skill-group reveal delay-4">
+          <h3 class="skill-group-title">Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item"><span class="cert-dot"></span><span>IT for Business Success — University of London</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Machine Learning for All — University of London</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Full-Stack Development for Beginners — University of London</span></div>
+            <div class="cert-item"><span class="cert-dot"></span><span>Software Testing Tutorial — University of London</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BA SAMPLES -->
+  <section id="samples">
+    <div class="section-wrap">
+      <p class="section-label reveal">04 / BA Samples</p>
+      <h2 class="section-title reveal delay-1">How I Document<br>&amp; Validate</h2>
+      <p class="sample-note reveal delay-2">Illustrative examples with fictional data, created to show my method. They are not taken from client projects.</p>
+
+      <div class="sample-grid">
+        <!-- User story -->
+        <div class="sample-card reveal delay-1">
+          <span class="sample-tag">User Story</span>
+          <h3>Online Vehicle Registration Renewal</h3>
+          <p class="story">As a <strong>vehicle owner</strong>, I want to <strong>renew my registration online</strong>, so that <strong>I don't have to visit the office</strong>.</p>
+          <p class="sample-sub">Acceptance criteria</p>
+          <ul class="ac-list">
+            <li><b>Given</b> a valid registration number, <b>when</b> the owner submits the renewal form, <b>then</b> the system shows the fee and due date.</li>
+            <li><b>Given</b> a successful payment, <b>then</b> a digital receipt is emailed and the status changes to "Renewed".</li>
+            <li><b>Given</b> an expired insurance record, <b>then</b> renewal is blocked with a clear error message.</li>
+          </ul>
+        </div>
+
+        <!-- AS-IS / TO-BE -->
+        <div class="sample-card reveal delay-2">
+          <span class="sample-tag">AS-IS vs TO-BE</span>
+          <h3>Registration Renewal Process</h3>
+          <div class="flow-cols">
+            <div>
+              <p class="sample-sub">AS-IS (manual)</p>
+              <ol class="flow flow-old">
+                <li>Visit the office</li>
+                <li>Queue and fill a paper form</li>
+                <li>Clerk verifies documents</li>
+                <li>Pay at the counter</li>
+                <li>Collect the certificate</li>
+              </ol>
+            </div>
+            <div>
+              <p class="sample-sub">TO-BE (system)</p>
+              <ol class="flow flow-new">
+                <li>Log in online</li>
+                <li>Auto-fetch vehicle record</li>
+                <li>System validates documents</li>
+                <li>Pay online</li>
+                <li>Download the certificate</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Test cases -->
+        <div class="sample-card sample-card-wide reveal delay-3">
+          <span class="sample-tag">UAT Test Cases</span>
+          <h3>Renewal Module</h3>
+          <div class="table-scroll">
+            <table class="sample-table">
+              <thead><tr><th>ID</th><th>Scenario</th><th>Steps</th><th>Expected Result</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td>TC-01</td><td>Renew with valid details</td><td>Enter a valid number, confirm fee, pay</td><td>Receipt emailed, status "Renewed"</td><td><span class="pill pass">Pass</span></td></tr>
+                <tr><td>TC-02</td><td>Expired insurance</td><td>Enter a number with expired insurance</td><td>Renewal blocked with error message</td><td><span class="pill pass">Pass</span></td></tr>
+                <tr><td>TC-03</td><td>Payment fails</td><td>Cancel the payment mid-way</td><td>Status stays "Pending", user can retry</td><td><span class="pill fail">Fail</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-wrap">
+      <p class="section-label reveal">05 / Projects</p>
+      <h2 class="section-title reveal delay-1">Things I've Built</h2>
+      <!-- FEATURED CAPSTONE -->
+      <div class="feature-card reveal delay-1">
+        <div class="feature-img">
+          <img src="secureeldercare.jpg" alt="SecureElderCare system shown to elderly users on a tablet and wall display" />
+          <span class="feature-ribbon">Featured · Final-Year Research Capstone</span>
+        </div>
+        <div class="feature-body">
+          <h3>SecureElderCare</h3>
+          <p class="feature-sub">Visual-Based Secure Elder Care Monitoring System Using Artificial Intelligence</p>
+          <p class="feature-lead">An AI-powered system that monitors elder care using computer vision. This is my final-year research project, built with a four-member team.</p>
+          <div class="feature-cols">
+            <div>
+              <h4>My role</h4>
+              <ul>
+                <li>Led the data modelling</li>
+                <li>Led the requirements engineering</li>
+                <li>Led the computer-vision logic design</li>
+              </ul>
+            </div>
+            <div>
+              <h4>How it works</h4>
+              <ul>
+                <li><b>MoveNet</b> for body pose</li>
+                <li><b>MediaPipe FaceMesh</b> for face tracking</li>
+                <li><b>COCO-SSD</b> for object detection</li>
+                <li>A custom <b>Temporal Heuristics Engine</b></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Built with</h4>
+              <ul>
+                <li><b>FastAPI</b> backend</li>
+                <li><b>React</b> frontend</li>
+              </ul>
+            </div>
+          </div>
+          <h4 class="feature-h">Key features</h4>
+          <div class="feature-feats">
+            <div><b>Action recognition and automatic scheduling</b><span>Identifies the elder's actions and marks them in the daily schedule automatically.</span></div>
+            <div><b>Missed-activity alerts</b><span>If a scheduled activity is not done, the caregiver and the guardian are notified.</span></div>
+            <div><b>Face and skeleton verification</b><span>Confirms who the person is using face and body-skeleton checks.</span></div>
+            <div><b>Tracking and geofencing</b><span>Tracks the person's location and works with safe-area boundaries.</span></div>
+            <div><b>Anomaly detection</b><span>Detects unusual behaviour or activity patterns.</span></div>
+          </div>
+          <p class="feature-foot">Presented to an academic panel with full technical documentation.</p>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Medical -->
+        <div class="proj-card reveal delay-1">
+          <div class="proj-img-col"><img src="illus-medical.jpg" alt="Medical History Management System" /></div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span></div><span class="proj-year-badge">3rd Year</span></div>
+            <h3>Medical History Management System</h3>
+            <p><strong>Problem:</strong> Patient records, prescriptions and pharmacy work were spread across separate systems, causing delays and a risk of clinical errors.<br><strong>My role:</strong> I helped build the backend and wrote the full system requirements. I designed role-based access for 4 user types: patients, doctors, pharmacists and data entry staff.<br><strong>Result:</strong> One MERN platform that keeps the whole clinical workflow in one place, with fewer manual handoffs and better data traceability.</p>
+            <div class="proj-footer"><span class="proj-date-label">Mar – May 2025</span><a href="https://github.com/Viduraz/ITPM_Project" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub <svg><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- Agri Connect -->
+        <div class="proj-card reveal delay-2">
+          <div class="proj-img-col"><img src="agri.jpg" alt="Agri Connect" /></div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>React.js</span><span>Spring Boot</span></div><span class="proj-year-badge">3rd Year</span></div>
+            <h3>Agri Connect – Smart Agricultural Platform</h3>
+            <p><strong>Problem:</strong> Farmers and agricultural learners had no single place to share knowledge, track plant care or monitor progress. They relied on scattered, informal methods.<br><strong>My role:</strong> I designed the user journeys and system flows, then helped build the platform with React.js and Spring Boot.<br><strong>Result:</strong> A community platform where users log plant care, track progress over time and share farming insights.</p>
+            <div class="proj-footer"><span class="proj-date-label">Mar – May 2025</span><a href="https://github.com/Viduraz/PAF_SLIIT" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub <svg><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- Jayasinghe -->
+        <div class="proj-card proj-card-wide reveal delay-3">
+          <div class="proj-img-col proj-img-wide"><img src="JJ.png" alt="Jayasinghe Storelines" /></div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span></div><span class="proj-year-badge">2nd Year · Sem 2</span></div>
+            <h3>Jayasinghe Storelines – Online Selling Platform</h3>
+            <p><strong>Problem:</strong> Shoppers could not judge product quality, and the business had no organised way to answer customer questions.<br><strong>My role:</strong> In a MERN team building a full online store, I built two modules: Reviews &amp; Ratings (star ratings shown as an average on each product page) and Inquiry Management (customers ask product questions, and admins view and reply).<br><strong>Result:</strong> Buyers gain confidence to purchase, and the business gets an organised way to hear from customers.</p>
+            <div class="proj-footer"><span class="proj-date-label">2nd Year 2nd Semester</span><a href="https://github.com/chathuwa-whiz/JayasingheStoreline-MERN" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub <svg><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- Exam System -->
+        <div class="proj-card reveal delay-1">
+          <div class="proj-img-col"><img src="illus-exam.jpg" alt="Online Examination System" /></div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>Java</span><span>Java Servlets</span><span>MySQL</span><span>Tomcat</span></div><span class="proj-year-badge">2nd Year · Sem 1</span></div>
+            <h3>Online Examination Management System</h3>
+            <p><strong>Problem:</strong> Handling exam schedules, registrations and results by hand created extra admin work and delayed students getting their results.<br><strong>My role:</strong> I built the whole system myself: the MySQL database, the Java Servlet backend and the frontend.<br><strong>Result:</strong> Students can view schedules, register, take exams online and see results straight away. Admins no longer process these by hand.</p>
+            <div class="proj-footer"><span class="proj-date-label">Feb – Jun 2024</span><a href="https://github.com/nethmichamathka/Project-Online-Examination-Management-System" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub <svg><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- Blood Donation -->
+        <div class="proj-card reveal delay-2">
+          <div class="proj-img-col"><img src="illus-blood.jpg" alt="Blood Donation System" /></div>
+          <div class="proj-body">
+            <div class="proj-meta"><div class="proj-stack"><span>HTML/CSS/JS</span><span>PHP</span><span>MySQL</span></div><span class="proj-year-badge">1st Year · Sem 2</span></div>
+            <h3>Blood Donation System</h3>
+            <p><strong>Problem:</strong> Finding matching blood donors is slow and scattered. Hospitals struggle to find the right blood type in time, and donors cannot easily reach the hospitals that need them.<br><strong>My role:</strong> I built the web platform from scratch with HTML, CSS, JavaScript, PHP and MySQL.<br><strong>Result:</strong> It covers donor registration, blood type inventory, hospital requests and automatic donor matching.</p>
+            <div class="proj-footer"><span class="proj-date-label">1st Year 2nd Semester</span><a href="https://github.com/nethmichamathka/Blood-Donation-System" target="_blank" rel="noopener noreferrer" class="proj-link">GitHub <svg><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section id="uiux">
+    <div class="section-wrap">
+      <p class="section-label reveal">06 / Showcase</p>
+      <h2 class="section-title reveal delay-1">Apps & <br>Interfaces <em>I've Built</em></h2>
+      <p class="uiux-intro reveal delay-2">
+        Alongside my BA and development work, I've also built and prototyped functional interfaces — from mobile banking apps to Android reminders and tourism app prototypes.
+        <a href="https://chamathkanethportfolio.my.canva.site" target="_blank" rel="noopener noreferrer" class="uiux-canva-link">View full gallery ↗</a>
+      </p>
+
+      <div class="uiux-grid reveal delay-2">
+        <div class="uiux-card uiux-card-tall">
+          <div class="uiux-img-wrap"><img src="uiux-banking.png" alt="Ceylon Lanka Bank Mobile App" /></div>
+          <div class="uiux-card-body">
+            <div class="uiux-badge">Mobile UI</div>
+            <h4>Ceylon Lanka Bank – Mobile Banking App</h4>
+            <p>Designed a clean mobile banking interface featuring balance display, debited/credited history, and quick-action send/pay buttons. Built for intuitive financial management.</p>
+            <a href="https://github.com/nethmichamathka/Celon_Lanka_Bank" target="_blank" rel="noopener noreferrer" class="uiux-github-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="uiux-card uiux-card-tall">
+          <div class="uiux-img-wrap"><img src="uiux-tourism.png" alt="Welcome to Sri Lanka Tourism App" /></div>
+          <div class="uiux-card-body">
+            <div class="uiux-badge">App Design · Figma</div>
+            <h4>Welcome to Sri Lanka – Tourism App</h4>
+            <p>Designed a multi-screen tourism app with destination categories (Colombo, Nature, History), immersive imagery, star ratings, and detailed place descriptions to guide travellers.</p>
+            <a href="https://github.com/nethmichamathka/SriTravels-figma-UI" target="_blank" rel="noopener noreferrer" class="uiux-github-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="uiux-card">
+          <div class="uiux-img-wrap"><img src="uiux-splash.png" alt="Splash Reminder Mobile App" /></div>
+          <div class="uiux-card-body">
+            <div class="uiux-badge">Mobile App · Kotlin</div>
+            <h4>Splash Reminder – Hydration App</h4>
+            <p>Android app built with Kotlin in Android Studio. Features push notifications and a daily alarm system to remind users to drink water and stay healthy.</p>
+            <a href="https://github.com/nethmichamathka/Water-Reminder-App" target="_blank" rel="noopener noreferrer" class="uiux-github-link">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-wrap">
+      <p class="section-label reveal">07 / Contact</p>
+      <h2 class="section-title reveal delay-1">Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal delay-2">
+          <p class="contact-body">I'm looking for junior Business Analyst and BA internship roles. I bring hands-on BA experience from government-scale systems, strong documentation skills, and a testing background in QA and UAT that keeps requirements clear and deliverable. Let's talk.</p>
+          <div class="contact-links">
+            <a href="mailto:chamathkanethmi11@gmail.com" class="contact-link"><svg><use href="#i-mail"/></svg>chamathkanethmi11@gmail.com</a>
+            <a href="https://linkedin.com/in/nethchamathka" target="_blank" rel="noopener noreferrer" class="contact-link"><svg><use href="#i-linkedin"/></svg>linkedin.com/in/nethchamathka</a>
+            <a href="https://github.com/nethmichamathka" target="_blank" rel="noopener noreferrer" class="contact-link"><svg><use href="#i-github"/></svg>github.com/nethmichamathka</a>
+            <a href="Nethmi_Chamathka_CV_Business_Analyst.pdf" class="contact-link" download><svg><use href="#i-down"/></svg>Download my CV (PDF)</a>
+          </div>
+        </div>
+        <div class="contact-location reveal delay-3">
+          <div class="location-box">
+            <div class="location-dot"></div>
+            <span>Kadawatha, Sri Lanka</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nethmi Chamathka</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="animations.js"></script>
+  <script>
+    /* Safety net: makes sure every section becomes visible even if another script fails */
+    (function () {
+      function show(el) { el.classList.add('visible'); }
+      function run() {
+        var els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) { els.forEach(show); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+        }, { threshold: 0.05 });
+        els.forEach(function (el) { io.observe(el); });
+        document.querySelectorAll('#hero .reveal').forEach(function (el) { setTimeout(function () { show(el); }, 300); });
+      }
+      if (document.readyState !== 'loading') run(); else document.addEventListener('DOMContentLoaded', run);
+    })();
+  </script>
+</body>
+</html>

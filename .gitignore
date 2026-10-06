@@ -1,0 +1,40 @@
+# System files
+.DS_Store
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+*.code-workspace
+
+# Temp files
+*.tmp
+*.temp
+*.log
+
+# Parent directories - only track files in this project
+../
+../../
+../../../
+.DS_Store
+index.html.tmp
+.kilo/
+.qodo/
