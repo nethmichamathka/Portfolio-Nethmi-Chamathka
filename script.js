@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chip.addEventListener('mouseenter', () => {
       chip.style.borderColor = i % 2 === 0 ? 'var(--pink)' : 'var(--blue)';
       chip.style.color = i % 2 === 0 ? 'var(--pink)' : 'var(--blue)';
-      chip.style.background = i % 2 === 0 ? 'rgba(251,176,45,.08)' : 'rgba(53,201,160,.08)';
+      chip.style.background = i % 2 === 0 ? 'rgba(201,151,0,.10)' : 'rgba(37,99,235,.10)';
     });
     chip.addEventListener('mouseleave', () => {
       chip.style.borderColor = '';
